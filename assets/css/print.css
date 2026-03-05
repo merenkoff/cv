@@ -1,2 +1,83 @@
-[class^="icon-"]{display: none;}
-.noPrint{display: none;}
+/* ============================================
+   Print styles — A4, light theme by default
+   ============================================ */
+
+@page {
+  size: A4;
+  margin: 15mm;
+}
+
+@media print {
+  /* Force light theme for print — override dark mode */
+  body,
+  [data-theme="dark"] {
+    --color-bg: #ffffff !important;
+    --color-surface: #ffffff !important;
+    --color-text: #1a1a1a !important;
+    --color-text-muted: #5c5c5c !important;
+    --color-accent: #2563eb !important;
+    --color-accent-hover: #1d4ed8 !important;
+    --color-border: #e5e7eb !important;
+    --color-skill-bg: rgba(37, 99, 235, 0.08) !important;
+    --color-skill-text: #2563eb !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* A4 width: 210mm - 30mm margins = 180mm content width */
+  .container {
+    max-width: 180mm !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* Hide elements */
+  .cv-buttons,
+  .noPrint,
+  .cv-theme-toggle {
+    display: none !important;
+  }
+
+  .cv-sidebar {
+    box-shadow: none !important;
+    border: 1px solid #e5e7eb !important;
+    background: #ffffff !important;
+    break-inside: avoid;
+  }
+
+  .cv-section {
+    break-inside: avoid;
+  }
+
+  .cv-experience-item {
+    break-inside: avoid;
+  }
+
+  /* Links — keep readable, no color */
+  a {
+    color: #1a1a1a !important;
+    text-decoration: none;
+  }
+
+  a[href]::after {
+    content: none !important;
+  }
+
+  /* Ensure images fit */
+  .cv-photo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Prevent text from being cut off */
+  h1, h2, h3, p, li {
+    orphans: 2;
+    widows: 2;
+  }
+}

@@ -1,7 +1,455 @@
-.container {padding: 20px 0 0 0}
-.photo{margin-left: 0px;}
-.hero-unit{background: #FFF;padding: 0}
-.page-header{clear: both; }
-.carousel-inner img{height: 300px; width: 100%}
-#printBtn,#downBtn,#bbButton{width: 100%;margin: 10px 0 0 0 }
-footer{text-align: center}
+/* ============================================
+   Sergei Merenkov — Modern CV (2025)
+   Minimalist, ATS-friendly, recruiter-optimized
+   Light/Dark theme toggle
+   ============================================ */
+
+:root {
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5c5c5c;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-border: #e5e7eb;
+  --color-skill-bg: rgba(37, 99, 235, 0.08);
+  --color-skill-text: #2563eb;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --radius: 6px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Dark theme (default) */
+[data-theme="dark"] {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-text: #e6edf3;
+  --color-text-muted: #8b949e;
+  --color-accent: #58a6ff;
+  --color-accent-hover: #79b8ff;
+  --color-border: #30363d;
+  --color-skill-bg: rgba(56, 139, 253, 0.15);
+  --color-skill-text: #58a6ff;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+/* ========== Hero Section ========== */
+.cv-hero {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: flex-start;
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cv-photo {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+.cv-hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-name {
+  margin: 0 0 var(--space-xs);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.cv-title {
+  margin: 0 0 var(--space-sm);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.cv-location {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* ========== Summary ========== */
+.cv-summary {
+  margin-bottom: var(--space-2xl);
+}
+
+.cv-summary p {
+  margin: 0 0 var(--space-md);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ========== Section Headers ========== */
+.cv-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.cv-section-title {
+  margin: 0 0 var(--space-lg);
+  padding-bottom: var(--space-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* ========== Skills ========== */
+.cv-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+}
+
+.cv-skill {
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-skill-text);
+  background: var(--color-skill-bg);
+  border-radius: 999px;
+}
+
+/* ========== Experience ========== */
+.cv-experience-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-experience-item {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cv-experience-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cv-job-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.cv-job-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.cv-job-date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.cv-job-company {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.cv-job-description {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.cv-job-bullets {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.cv-job-bullets li {
+  margin-bottom: var(--space-xs);
+}
+
+.cv-job-tech {
+  margin-top: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.cv-job-tech strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.cv-job-link {
+  font-size: 0.85rem;
+  margin-top: var(--space-xs);
+}
+
+.cv-job-link a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.cv-job-link a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Earlier Experience (compact) ========== */
+.cv-earlier-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-earlier-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.cv-earlier-item:last-child {
+  border-bottom: none;
+}
+
+.cv-earlier-role {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.cv-earlier-date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.cv-earlier-tech {
+  width: 100%;
+  margin-top: var(--space-xs);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ========== Contact Sidebar ========== */
+.cv-sidebar {
+  margin-top: var(--space-2xl);
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.cv-contact-title {
+  margin: 0 0 var(--space-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.cv-contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-contact-list li {
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+.cv-contact-list a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.cv-contact-list a:hover {
+  text-decoration: underline;
+}
+
+.cv-buttons {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cv-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.cv-btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.cv-btn-secondary:hover {
+  background: var(--color-bg);
+}
+
+/* ========== Education ========== */
+.cv-education-item {
+  margin-bottom: var(--space-lg);
+}
+
+.cv-education-item:last-child {
+  margin-bottom: 0;
+}
+
+.cv-education-degree {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.cv-education-school {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.cv-education-date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ========== Interests ========== */
+.cv-interests {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* ========== Footer ========== */
+.cv-footer {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.cv-footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* ========== Theme Toggle ========== */
+.cv-theme-toggle {
+  position: fixed;
+  top: var(--space-md);
+  right: var(--space-md);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.cv-theme-toggle:hover {
+  color: var(--color-text);
+  border-color: var(--color-accent);
+}
+
+.cv-theme-toggle:hover .cv-theme-icon {
+  opacity: 1;
+}
+
+.cv-theme-icon {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 640px) {
+  .cv-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cv-photo {
+    width: 100px;
+    height: 100px;
+  }
+}

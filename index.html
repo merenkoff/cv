@@ -1,320 +1,289 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Sergei Merenkov — Curriculum Vitae</title>
-    <meta name="description" content="Sergei Merenkov, Software Engineer, iOS (iPhone/iPad) applications, Cocoa, Objective-c">
-    <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.setAttribute('data-theme', localStorage.getItem('cv-theme') || 'dark');
+    </script>
+    <title>Sergei Merenkov — Senior iOS & Mobile Engineer</title>
+    <meta name="description" content="Sergei Merenkov — 17+ years in iOS/macOS development. Swift, Objective-C, GraphQL, SwiftUI. FinTech, Blockchain, Mobile Architecture.">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/print.css" rel="stylesheet" media="print">
     <link rel="shortcut icon" href="/assets/images/favicon.ico">
-    <!--[if IE 6]><script type="text/javascript" src="http://deathtoie6.com/ie6-not-supported.js" ></script><![endif]-->
 </head>
 <body>
+    <button type="button" class="cv-theme-toggle noPrint" id="themeToggle" aria-label="Toggle theme">
+        <span class="cv-theme-icon" id="themeIcon">🌙</span>
+        <span id="themeLabel">Light</span>
+    </button>
     <div class="container">
-        <div class="span8">
-            <div class="photo thumbnail span3">
-                <img src="http://www.gravatar.com/avatar/8d723cfc0ba8ed49af2220e2f32184fb?s=220" alt="Sergei Merenkov">
+        <!-- Hero -->
+        <header class="cv-hero">
+            <img class="cv-photo" src="https://www.gravatar.com/avatar/8d723cfc0ba8ed49af2220e2f32184fb?s=240" alt="Sergei Merenkov">
+            <div class="cv-hero-content">
+                <h1 class="cv-name">Sergei Merenkov</h1>
+                <p class="cv-title">Senior iOS & Mobile Engineer</p>
+                <p class="cv-location">Europe (Poland, Ukraine)</p>
             </div>
-            <div class="hero-unit span4">
-                <h1>Sergei Merenkov</h1>
-                <h2>Software Engineer</h2>
-                <p>
-                    <i class="icon-map-marker"></i>&nbsp;Europe (Poland, Ukraine)
-                </p>
-            </div>
-            <div class="page-header">
-            </div>
+        </header>
 
+        <!-- Summary -->
+        <section class="cv-summary">
             <p>
-                I love building innovative applications using cutting-edge technologies. I enjoy experimenting with design patterns, researching software architecture and investigating usability issues on mobile applications.
+                <strong>17+ years</strong> of commercial iOS/macOS development. I build innovative applications using cutting-edge technologies. Strong focus on software architecture, design patterns, and mobile UX. Experience in FinTech, blockchain, and product development from idea to App Store.
             </p>
             <p>
-                I am proficient with Objective-C, Cocoa-touch (iOS SDK) to design & develop media and business projects for the iPhone or iPad.
+                Proficient in Swift, Objective-C, SwiftUI, GraphQL. Background in Cocoa Touch, mobile architecture (MVC, MVVM), and cross-platform solutions. Passionate about clean code, continuous integration, and team leadership.
             </p>
-            <div class="page-header">
-                <h2>Summary</h2>
+        </section>
+
+        <!-- Skills -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Core Skills</h2>
+            <div class="cv-skills">
+                <span class="cv-skill">Swift</span>
+                <span class="cv-skill">SwiftUI</span>
+                <span class="cv-skill">Objective-C</span>
+                <span class="cv-skill">GraphQL</span>
+                <span class="cv-skill">iOS SDK</span>
+                <span class="cv-skill">Cocoa Touch</span>
+                <span class="cv-skill">TypeScript</span>
+                <span class="cv-skill">Solidity</span>
+                <span class="cv-skill">REST API</span>
+                <span class="cv-skill">CI/CD</span>
+                <span class="cv-skill">Mobile Architecture</span>
+                <span class="cv-skill">SQL</span>
+                <span class="cv-skill">C++</span>
             </div>
-            <dl>
-                <dt>Languages of programming</dt>
-                <dd>Objective-C, Swift, SQL, C++</dd>
-                <dt>Platforms</dt>
-                <dd>iOS, OS X, *nix like</dd>
-                <dt>Specialties</dt>
-                <dd>MVC, MVVP, iOS SDK 3 and above, Cocoa touch, JSON, Mobile architecture</dd>
-            </dl>
+        </section>
 
-            <div class="page-header noPrint">
-                <h2>Open source commitment</h2>
+        <!-- Recent Experience (last 10 years) -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Recent Experience (2015 — Present)</h2>
+            <ul class="cv-experience-list">
+                <li class="cv-experience-item">
+                    <div class="cv-job-header">
+                        <h3 class="cv-job-title">Senior Software Developer</h3>
+                        <span class="cv-job-date">Jan 2022 — Present</span>
+                    </div>
+                    <p class="cv-job-company">FUIB (ПУМБ), Ukraine</p>
+                    <p class="cv-job-description">Developing a leading mobile banking application for one of Ukraine's largest banks.</p>
+                    <ul class="cv-job-bullets">
+                        <li>Designing APIs with GraphQL and implementing new features</li>
+                        <li>Developing new architecture approaches for scalable mobile apps</li>
+                        <li>Supporting continuous integration and delivery pipelines</li>
+                        <li>Implementing user interface features and improving UX</li>
+                    </ul>
+                    <p class="cv-job-tech"><strong>Stack:</strong> Swift, SwiftUI, GraphQL, iOS</p>
+                </li>
+
+                <li class="cv-experience-item">
+                    <div class="cv-job-header">
+                        <h3 class="cv-job-title">Senior Blockchain Developer</h3>
+                        <span class="cv-job-date">Aug 2020 — Dec 2021</span>
+                    </div>
+                    <p class="cv-job-company">Unstoppable Domains</p>
+                    <p class="cv-job-description">Building the decentralized internet (Web3). Contributing to core infrastructure for blockchain-based domain resolution.</p>
+                    <ul class="cv-job-bullets">
+                        <li>Developing resolution libraries and SDKs for Unstoppable Domains</li>
+                        <li>Cross-platform development (Swift, TypeScript)</li>
+                        <li>Smart contracts and EVM integration</li>
+                    </ul>
+                    <p class="cv-job-tech"><strong>Stack:</strong> TypeScript, Swift, Solidity, PostgreSQL, Express.js, EVM</p>
+                </li>
+
+                <li class="cv-experience-item">
+                    <div class="cv-job-header">
+                        <h3 class="cv-job-title">Senior iOS Developer</h3>
+                        <span class="cv-job-date">Jan 2020 — Aug 2020</span>
+                    </div>
+                    <p class="cv-job-company">Raiffeisen Bank International</p>
+                    <p class="cv-job-description">Developing innovative FinTech solutions for one of the largest banking groups in CEE.</p>
+                    <ul class="cv-job-bullets">
+                        <li>Designing APIs with GraphQL</li>
+                        <li>Developing new architecture and approach for SwiftUI projects</li>
+                        <li>Supporting continuous integration</li>
+                        <li>Implementing user interfaces in SwiftUI / Swift</li>
+                    </ul>
+                    <p class="cv-job-tech"><strong>Stack:</strong> Swift, SwiftUI, GraphQL, CI/CD</p>
+                </li>
+
+                <li class="cv-experience-item">
+                    <div class="cv-job-header">
+                        <h3 class="cv-job-title">Team Lead iOS Developer</h3>
+                        <span class="cv-job-date">Jan 2019 — Jan 2020</span>
+                    </div>
+                    <p class="cv-job-company">Lohika, Kyiv</p>
+                    <p class="cv-job-description">Inspo — lifestyle content and shoppable experiences from expert creators. Personalization, discovery, and inspiration in a clutter-free experience.</p>
+                    <p class="cv-job-link"><a href="https://insponetwork.com" target="_blank" rel="noopener">insponetwork.com</a></p>
+                    <ul class="cv-job-bullets">
+                        <li>Leading iOS team, architecture decisions, code reviews</li>
+                        <li>Curated channels, product discovery, e-commerce integration</li>
+                    </ul>
+                </li>
+
+                <li class="cv-experience-item">
+                    <div class="cv-job-header">
+                        <h3 class="cv-job-title">Senior iOS Developer</h3>
+                        <span class="cv-job-date">May 2018 — Dec 2018</span>
+                    </div>
+                    <p class="cv-job-company">BASQUARE, Lviv</p>
+                    <p class="cv-job-description">Mobile app for health diagnostics using IoT devices and BLE communication. (Project under NDA)</p>
+                    <p class="cv-job-tech"><strong>Stack:</strong> Objective-C, Bluetooth LE, IoT</p>
+                </li>
+
+                <li class="cv-experience-item">
+                    <div class="cv-job-header">
+                        <h3 class="cv-job-title">Senior iOS Developer</h3>
+                        <span class="cv-job-date">Sep 2017 — Apr 2018</span>
+                    </div>
+                    <p class="cv-job-company">Megalist, Lviv</p>
+                    <p class="cv-job-description">Multiple projects: <strong>Megalist</strong> (flexible work platform), <strong>Livegenic</strong> (video collaboration for insurance), <strong>nCrypted Cloud</strong> (secure file sharing).</p>
+                    <p class="cv-job-tech"><strong>Stack:</strong> Swift 4, Objective-C, REST API, WebRTC, JSON, Cocoapods</p>
+                </li>
+
+                <li class="cv-experience-item">
+                    <div class="cv-job-header">
+                        <h3 class="cv-job-title">Senior iOS Developer</h3>
+                        <span class="cv-job-date">May 2016 — Jul 2017</span>
+                    </div>
+                    <p class="cv-job-company">Symphony Solutions → Gala Coral Group</p>
+                    <p class="cv-job-description">Coral Connect — sports betting and gaming platform. (Under NDA)</p>
+                    <p class="cv-job-link"><a href="https://vippreview.coral.co.uk" target="_blank" rel="noopener">Example app</a></p>
+                    <p class="cv-job-tech"><strong>Stack:</strong> Swift 3, watchOS 3, WebKit, REST API, Cocoapods</p>
+                </li>
+
+                <li class="cv-experience-item">
+                    <div class="cv-job-header">
+                        <h3 class="cv-job-title">Senior iOS Developer</h3>
+                        <span class="cv-job-date">Aug 2014 — Apr 2016</span>
+                    </div>
+                    <p class="cv-job-company">Luxoft Poland, Kraków</p>
+                    <p class="cv-job-description">
+                        <strong>UBS</strong> (Jun 2015 — Apr 2016): Funds, Locator, Navigator — apps for UBS Wealth Management.<br>
+                        <strong>Navionics</strong> (Aug 2014 — May 2015): Boating — award-winning marine charts app, same data as GPS plotters.
+                    </p>
+                    <p class="cv-job-link"><a href="https://itunes.apple.com/developer/ubs-ag/id369153318" target="_blank" rel="noopener">UBS Apps</a> · <a href="https://itunes.apple.com/developer/navionics/id294013906" target="_blank" rel="noopener">Navionics Apps</a></p>
+                    <p class="cv-job-tech"><strong>Stack:</strong> iOS 9, watchOS 2, Cordova, MapKit, C++, Universal apps</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Earlier Experience (compact) -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Earlier Experience</h2>
+            <ul class="cv-earlier-list">
+                <li class="cv-earlier-item">
+                    <span class="cv-earlier-role">Mobile Architect / iOS Developer — Swivl (swivl.com)</span>
+                    <span class="cv-earlier-date">Jul 2013 — Jul 2014</span>
+                    <span class="cv-earlier-tech">Swivl Capture — robotic platform for learning. Amazon S3, REST API, AFNetworking</span>
+                </li>
+                <li class="cv-earlier-item">
+                    <span class="cv-earlier-role">Senior iOS Developer — R&R Music (tunehog.com)</span>
+                    <span class="cv-earlier-date">Oct 2012 — Jul 2013</span>
+                    <span class="cv-earlier-tech">Music discovery app. REST API, AFNetworking</span>
+                </li>
+                <li class="cv-earlier-item">
+                    <span class="cv-earlier-role">Senior Software Engineer / CTO — Appmania</span>
+                    <span class="cv-earlier-date">Feb 2010 — Jul 2012</span>
+                    <span class="cv-earlier-tech">Technical department setup, team management. iOS games (Demolition Master, Farm It!, etc.). Objective-C, Cocoa, CoreData</span>
+                </li>
+                <li class="cv-earlier-item">
+                    <span class="cv-earlier-role">CTO (Co-founder) — SoftGames Ukraine</span>
+                    <span class="cv-earlier-date">Jan 2010 — Oct 2012</span>
+                    <span class="cv-earlier-tech">Unarchiver for iOS. <a href="https://github.com/merenkoff/Unrar4iOS" target="_blank" rel="noopener">Unrar4iOS</a></span>
+                </li>
+                <li class="cv-earlier-item">
+                    <span class="cv-earlier-role">Lead Developer — Kvazar-Micro</span>
+                    <span class="cv-earlier-date">Oct 2007 — Feb 2010</span>
+                    <span class="cv-earlier-tech">Corporate database, business processes. 1C, Transact-SQL, Perl, PL/SQL</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Education</h2>
+            <div class="cv-education-item">
+                <p class="cv-education-degree">Master's degree, Information Technology Project Management</p>
+                <p class="cv-education-school">Taras Shevchenko National University of Kyiv</p>
+                <p class="cv-education-date">2022 — 2023</p>
             </div>
-            <div class="noPrint">
-                Feel free to view my <a href="https://github.com/merenkoff?tab=repositories"><i class="icon-tags"></i> GitHub account</a>
+            <div class="cv-education-item">
+                <p class="cv-education-degree">Bachelor's degree, Mathematics and Computer Science</p>
+                <p class="cv-education-school">Kyiv National Taras Shevchenko University</p>
+                <p class="cv-education-date">2001 — 2022</p>
             </div>
+        </section>
 
+        <!-- Interests -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Interests</h2>
+            <p class="cv-interests">UI/UX design, User Experience, software architecture, design patterns, usability research</p>
+        </section>
 
-            <div class="page-header">
-                <h2>Experience</h2>
+        <!-- Contact Sidebar -->
+        <aside class="cv-sidebar">
+            <h2 class="cv-contact-title">Contact</h2>
+            <ul class="cv-contact-list">
+                <li>✉️ <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></li>
+                <li>📱 <a href="tel:+380679551952">+38 (67) 955-19-52</a></li>
+                <li>🔗 <a href="https://www.linkedin.com/in/merenkoff" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li>💻 <a href="https://github.com/merenkoff" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+            <div class="cv-buttons noPrint">
+                <a href="index.html" class="cv-btn cv-btn-secondary" id="printBtn">🖨 Print</a>
+                <a href="assets/SergeiMerenkov.CV.pdf" class="cv-btn" id="downBtn">⬇ Download PDF</a>
             </div>
-            
-            <h3>Senior Software Developer at FUIB bank (ПУМБ)</h3>
-            <span class="label label-info">Jan 2022 - now</span>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Developing a best mobile bank application</dd>
-                <dt>Description</dt>
-                <dd>Designing APIs with GraphQL, and impelementing new features</dd>
-                <dd>Developing new architecture approach.</dd>
-                <dd>Supporting continuous integration</dd>
-                <dd>Implementing user interface features</dd>
-            </dl>
-            <div class="page-header">
-            </div>
+        </aside>
 
-            <h3>Senior Blockchain Developer at Unstoppable Domains</h3>
-            <span class="label label-info">AUG 2020 - DEC 2021</span>
-            <dl class="dl-horizontal">
-                <dt>Developing new decentralized internet WEB3.0</dt>
-                <dt>Technologies</dt>
-                <dd>Typescript, Swift, Solidity, postgress, Express JS, EVM</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>Senior iOS Developer at Raiffeisen</h3>
-            <span class="label label-info">Jan 2010 - AUG 2020</span>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Developing a something new in FinTech area</dd>
-                <dt>Description</dt>
-                <dd>Designing APIs with GraphQL</dd>
-                <dd>Developing new architecture / approach for SwiftUI projects.</dd>
-                <dd>Supporting continuous integration</dd>
-                <dd>Implementing user interface in SwiftUI / Swift (Programming Language)</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>Team Lead iOS Developer at Lohika, Kyiv, Ukraine</h3>
-            <span class="label label-info">Jan 2019 - Jan 2020</span>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Insponetwork</dd>
-                <dt>Link to WebApp</dt>
-                <dd><a href="https://insponetwork.com">Inspo app</a></dd>
-                <dt>Description</dt>
-                <dd>Inspo is a new app showcasing lifestyle content and shoppable experiences from the world’s expert creators. Inspo brings personalization, discovery, and inspiration to fans in a clutter-free, experience. In one place fans curate channels based on the creators and categories they’ve selected, and can easily browse and buy products that catch their eye.</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-			<h3>Senior iOS Developer at BASQUARE, Lviv, Ukraine</h3>
-            <span class="label label-info">May 2018 - Dec 2018</span>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Obscured due to NDA</dd>
-                <dt>Description</dt>
-                <dd>Mobile app, designed for assistance in health diagnostics, using IoT devices and BLE communication </dd>
-                <dt>Technologies</dt>
-                <dd>Objective-C, Bluetooth LE</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>iOS Developer, Lviv, Ukraine</h3>
-            <span class="label label-info">September 2017 - April 2018</span>
-            <h4><a href="https://megalist.com">Megalist</a></h4>
-            
-            <dl class="dl-horizontal">
-                <dt>Projects:</dt>
-                <dd>Megalist mobile app</dd>
-                <dt>Description</dt>
-                <dd>Our mission is to set people free by giving them a choice of where and when to work, helping them be
-more flexible so they can do more with their lives.</dd>
-                <dt>Technologies</dt>
-                <dd>Swift 4, REST API, JSON, Cocoapods</dd>
-            </dl>
-            <h4><a href="https://www.livegenic.com">Livegenic</a></h4>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Livegenic mobile apps</dd>
-                <dt>Description</dt>
-                <dd>"Livegenic provides an award-winning video collaboration and claims management platform for
-insurance, along with a full suite of custom product development solutions."</dd>
-                <dt>Technologies</dt>
-                <dd>Objective-C, REST API, WebRTC, Cocoapods</dd>
-            </dl>
-            <h4><a href="https://www.encryptedcloud.com">nCrypted Cloud</a></h4>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>nCrypted Cloud app</dd>
-                <dt>Description</dt>
-                <dd>Securely share sensitive files with your team, contractors, clients, & vendors Protect and share your files in seconds from your existing cloud provider on any device. Track & control access to your files even after you’ve hit Send.</dd>
-                <dt>Technologies</dt>
-                <dd>Objective-C, REST API, Google Docs API, Dropbox API, Box.net API, and much more.</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>Senior iOS Developer at Symphony Solutions</h3>
-            <h4><a href="http://sports.coral.co.uk/">Gala Coral Group Ltd</a></h4>
-            <span class="label label-info">May 2016 - July 2017</span>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Coral Connect</dd>
-                <dt>Link to WebApp</dt>
-                <dd><a href="https://vippreview.coral.co.uk/#/">Example mobile app</a></dd>
-                <dt>Description</dt>
-                <dd>Under NDA</dd>
-                <dt>Technologies</dt>
-                <dd>Swift 3, watchOS 3, WebKit, REST API, JSON, Cocoapods</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>Senior iOS Developer at Luxoft Poland, Kraków, Poland</h3>
-            <h4><a href="https://www.ubs.com/global/en.html">UBS</a></h4>
-            <span class="label label-info">June 2015 - April 2016</span>
-            <dl class="dl-horizontal">
-                <dt>Projects:</dt>
-                <dd>Funds, Locator, Navigator and etc.</dd>
-                <dt>Link to Appstore</dt>
-                <dd><a href="https://itunes.apple.com/ru/developer/ubs-ag/id369153318">UBS AG Applications</a></dd>
-                <dt>Description</dt>
-                <dd>We are wrote and support a few applications for UBS Wealth Management (Some of them under NDA)</dd>
-                <dt>New technologies</dt>
-                <dd>iOS 9, watchOS 2, Cordova, Universal app development.</dd>
-            </dl>
-            <h4><a href="http://www.navionics.com/en">Navionics SpA.</a></h4>
-            <span class="label label-info">August 2014 - May 2015</span>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Boating</dd>
-                <dt>Description</dt>
-                <dd>The Most Widely Used Boating App! With this app you get the same award-winning detailed charts as GPS plotters because it provides the fully-comprehensive, all-in-one Navionics+ package</dd>
-                <dt>Link to Appstore</dt>
-                <dd><a href="https://itunes.apple.com/ru/developer/navionics/id294013906?mt=8">Navionics Applications</a></dd>
-                <dt>Technologies</dt>
-                <dd>MapKit, REST API, C++(universal map library)</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-            
-            <h3>Mobile Architect / iOS Developer at Swivl (swivl.com)</h3>
-            <span class="label label-info">July 2013-July 2014</span>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Swivl Capture</dd>
-                <dt>Description</dt>
-                <dd>The robotic platform for learning.</dd>
-                <dt>Technologies</dt>
-                <dd>Amazon S3, REST API, JSON, AFNetworking, Cocoapods</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>Senior iOS Developer at R&R Music (tunehog.com), Kyiv, Ukraine</h3>
-            <span class="label label-info">October 2012 - July 2013</span>
-            <dl class="dl-horizontal">
-                <dt>Project</dt>
-                <dd>Discovery music</dd>
-                <dt>Description</dt>
-                <dd>Search new music from the past, present and future with yours prefer music</dd>
-                <dt>Technologies</dt>
-                <dd>REST API, JSON, AFNetworking, Cocoapods</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>Senior software engineer / CTO at Appmania (www.appmania.ua), Kyiv, Ukraine</h3>
-            <span class="label label-info">February 2010 - July 2012</span>
-            <dl class="dl-horizontal">
-                Creation of the technical department. Managing developers and QA.
-Architecting games logic. Writing AI for first iOS mobile shooter game (on Appstore).
-
-Analysis of the technology on market Apple iOS and OS X. 
-Introduction JIRA infrastructure to the process of development and QA. 
-
-                <dt>Projects</dt>
-                <dd>http://itunes.apple.com/ru/app/demolition-master-project/id351128966?mt=8</dd>
-<dd>http://itunes.apple.com/ru/app/farm-it!/id388193998?mt=8</dd>
-<dd>http://itunes.apple.com/ru/app/razrusitel-zdanij-3d/id454433701?mt=8</dd>
-<dd>http://itunes.apple.com/ru/app/cats-inc./id403547508?mt=8</dd>
-
-
-
-                <dt>Description</dt>
-                <dd>iPad Apps and games development</dd>
-                <dd>debugging and application optimization, multithread development.</dd>
-                <dt>Technologies</dt>
-                <dd>Objective-C, JSON, Cocoa, Cocoa Touch, SQL, CoreData.</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>CTO (Co-founder) at SoftGames Ukraine (www.softgames.biz), Kyiv, Ukraine</h3>
-            <span class="label label-info">January 2010 - October 2012</span>
-            <dl class="dl-horizontal">
-                <dt>Main project</dt>
-                <dd>Unarchiver for iOS</dd>
-                <dt>Description</dt>
-                <dd>iOS application for unarchiving zip and rar archives</dd>
-                <dt>Technologies</dt>
-                <dd><a href="https://github.com/merenkoff/Unrar4iOS">Unrar4iOS</a>, iOS Documents Framework</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-
-            <h3>Lead Developer at Kvazar-Micro, Kyiv, Ukraine</h3>
-            <span class="label label-info">October 2007 – February 2010</span>
-            <dl class="dl-horizontal">
-                <dt>Description</dt>
-                <dd>Create, update, and maintain corporate database.<br>Coordinate with customers and programmers for major changes in the logic of business processes. Provide technical support for usability issues and critical data base problems, as needed.</dd>
-                <dt>Technologies</dt>
-                <dd>1C:built-in language, Transact- SQL, Perl, and PL/SQL</dd>
-            </dl>
-            <div class="page-header">
-            </div>
-           
-            <br />
-            <div class="page-header">
-                <h2>Interests</h2>
-            </div>
-            <dl>
-                <dt>UI/UX</dt>
-                <dd>User Experience Design, Graphic Design</dd>
-            </dl>
-        </div>
-        <div class="span3">
-            <h2>Contact</h2>
-            <p><i class="icon-envelope"></i><a href="mailto:mer.sergei@gmail.com">&nbsp;mer.sergei@gmail.com</a></p>
-            <p><i class="icon-tags"></i><a href="https://bitbucket.org/softgamesua">&nbsp;https://bitbucket.org/softgamesua</a></p>
-            <p><i class="icon-tags"></i><a href="https://github.com/merenkoff">&nbsp;https://github.com/merenkoff</a></p>
-            <p><i class="icon-eye-open"></i><a href="http://ua.linkedin.com/in/merenkoff">&nbsp;http://ua.linkedin.com/in/merenkoff</a></p>
-          <!--  <p><i class="icon-signal"></i><a href="tel://+442032893083">&nbsp;🇬🇧&nbsp;+44 20 3289 3083</a></p> -->
-          <!--   <p><i class="icon-signal"></i><a href="tel://+380679551952">&nbsp;🇺🇦&nbsp;+38 (067) 955-19-52</a></p>-->
-          <p><i class="icon-signal"></i><a href="tel://+380679551952">&nbsp;🇺🇦&nbsp;+38 (67) 955-19-52</a></p>
-            <a href="index.html" class="btn btn-large noPrint" id="printBtn"><i class="icon-print"></i>&nbsp;Print</a>
-            <a href="assets/SergeiMerenkov.CV.pdf" class="btn btn-large noPrint" id="downBtn"><i class="icon-download"></i>&nbsp;Download</a>
-
-        </div>
-    </div>
-
-    <div class="container">
-        <footer>
+        <!-- Footer -->
+        <footer class="cv-footer">
             <p>
-                <i class="icon-envelope"></i>&nbsp;<a href="mailto:mer.sergei@gmail.com">&nbsp;mer.sergei@gmail.com</a>&nbsp;
-                <!--  <i class="icon-signal"></i>&nbsp;🇺🇦&nbsp;+38 (067) 955-19-52&nbsp;-->
-                <i class="icon-signal"></i>&nbsp;🇺🇦&nbsp;+38 (67) 955-19-52&nbsp;
-                <i class="icon-map-marker"></i>&nbsp;Kyiv, Ukraine
+                <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> · 
+                <a href="tel:+380679551952">+38 (67) 955-19-52</a> · 
+                Kyiv, Ukraine
             </p>
         </footer>
     </div>
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script>
+        (function() {
+            const STORAGE_KEY = 'cv-theme';
+
+            function getInitialTheme() {
+                const stored = localStorage.getItem(STORAGE_KEY);
+                return stored || 'dark';
+            }
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                const icon = document.getElementById('themeIcon');
+                const label = document.getElementById('themeLabel');
+                if (theme === 'dark') {
+                    icon.textContent = '☀️';
+                    label.textContent = 'Light';
+                } else {
+                    icon.textContent = '🌙';
+                    label.textContent = 'Dark';
+                }
+                localStorage.setItem(STORAGE_KEY, theme);
+            }
+
+            function toggleTheme() {
+                const current = document.documentElement.getAttribute('data-theme') || 'dark';
+                const next = current === 'dark' ? 'light' : 'dark';
+                applyTheme(next);
+            }
+
+            // Default: dark theme
+            const initial = getInitialTheme();
+            document.documentElement.setAttribute('data-theme', initial);
+            applyTheme(initial);
+
+            document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+            document.getElementById('printBtn').addEventListener('click', function() { window.print(); });
+        })();
+    </script>
 </body>
 </html>
